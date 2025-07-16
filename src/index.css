@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --animate-aurora: aurora 10s ease-in-out infinite;
+
+  @keyframes aurora {
+    0%,
+    100% {
+      transform: translateX(-50%) rotate(45deg) skewY(12deg);
+
+      opacity: 0.2;
+    }
+    50% {
+      transform: translateX(-20%) rotate(47deg) skewY(15deg);
+      opacity: 0.4;
+    }
+  }
+}
+
+@theme {
+  --animate-fade-in: fade-in 0.5s ease-out;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
